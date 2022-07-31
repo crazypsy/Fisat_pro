@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backwall"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="left"
+        android:text="Hello Name"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/Notification"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/registerchooseicon"
+        android:src="@drawable/ic_notification" />
+    <Button
+        android:id="@+id/Nosstification"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="110dp"
+        android:layout_marginRight="30dp"
+
+        android:background="@drawable/rectanglebox"
+        android:src="@drawable/ic_notification" />
+    <Button
+        android:id="@+id/approvedMore"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="30dp"
+
+        android:background="@drawable/rectanglebox"
+        android:src="@drawable/ic_notification" />
+    <Button
+        android:id="@+id/DeclinedMore"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="470dp"
+        android:layout_marginRight="30dp"
+
+        android:background="@drawable/rectanglebox"
+        android:src="@drawable/ic_notification" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical"
+
+            android:paddingBottom="20dp">
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/editTextTextPersonName"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="50dp"-->
+            <!--                android:layout_gravity="center"-->
+
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:background="@drawable/input"-->
+            <!--                android:drawableStart="@drawable/search"-->
+
+            <!--                android:drawablePadding="10dp"-->
+            <!--                android:drawableTint="@color/black"-->
+            <!--                android:ems="10"-->
+            <!--                android:hint="Search Here"-->
+            <!--                android:inputType="textPersonName"-->
+            <!--                android:paddingStart="15dp"-->
+            <!--                android:textColor="@color/black" />-->
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:text="To Be Check"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:text="Approved"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:text="Declined"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/rectanglebox" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            app:fab_colorNormal="@color/grey_300"
+
+            app:fab_colorPressed="@color/grey_400"
+            app:fab_expandDirection="up"
+            app:fab_icon="@drawable/ic_add"
+            app:fab_labelsPosition="left" />
+
+
+</RelativeLayout>

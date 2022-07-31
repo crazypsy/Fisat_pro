@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backwall"
+    tools:context=".Student_Input">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+
+        android:layout_marginLeft="30dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Data"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Temerature"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="enter the data using thermometer"
+            android:textColor="@color/white"
+
+            android:gravity="left"
+            android:textSize="15dp"
+            />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Normal Temperature  :"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24 C"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+
+
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+
+
+                <EditText
+                    android:layout_width="130dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:hint="Temperture"
+                    android:paddingStart="10dp"
+                    android:textSize="18dp"
+                    />
+                <Spinner
+                    android:layout_width="70dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40sp"
+                    android:textSize="18dp"
+                    />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rain"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="enter the data using Rain gauage"
+                android:textColor="@color/white"
+
+                android:gravity="left"
+                android:textSize="15dp"
+                />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Normal Rain  :"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24 mm"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+
+
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+
+
+                <EditText
+                    android:layout_width="130dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:hint="Rain"
+                    android:paddingStart="10dp"
+                    android:textSize="18dp"
+                    />
+                <Spinner
+                    android:layout_width="70dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40sp"
+                    android:textSize="18dp"
+                    />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wind Speed"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="enter the data using anemometer"
+                android:textColor="@color/white"
+
+                android:gravity="left"
+                android:textSize="15dp"
+                />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Normal Wind Speed  :"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24 C"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+
+
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+
+
+                <EditText
+                    android:layout_width="130dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:hint="Speed"
+                    android:paddingStart="10dp"
+                    android:textSize="18dp"
+                    />
+                <Spinner
+                    android:layout_width="70dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40sp"
+                    android:textSize="18dp"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Direction "
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+
+                <Spinner
+                    android:layout_width="70dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40sp"
+                    android:textSize="18dp"
+                    />
+
+            </TableRow>
+        </TableLayout>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humidity"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="enter the data using Hygrometer"
+                android:textColor="@color/white"
+
+                android:gravity="left"
+                android:textSize="15dp"
+                />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Normal Humidity  :"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24 C"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    />
+
+
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+
+
+                <EditText
+                    android:layout_width="130dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:hint="humidity"
+                    android:paddingStart="10dp"
+                    android:textSize="18dp"
+                    />
+                <Spinner
+                    android:layout_width="70dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40sp"
+                    android:textSize="18dp"
+                    />
+
+            </TableRow>
+        </TableLayout>
+
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Water Below Ground level"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="enter the data using Measuing Tape"
+                android:textColor="@color/white"
+
+                android:gravity="left"
+                android:textSize="15dp"
+                />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+
+
+
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+
+
+                <EditText
+                    android:layout_width="130dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:hint="water level"
+                    android:paddingStart="10dp"
+                    android:textSize="18dp"
+                    />
+                <Spinner
+                    android:layout_width="70dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/input"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40sp"
+                    android:textSize="18dp"
+                    />
+
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SubMit"
+            android:background="@drawable/submit"
+            android:layout_gravity="right"
+            android:layout_marginBottom="50dp"
+            />
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>
