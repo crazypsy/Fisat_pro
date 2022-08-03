@@ -33,5 +33,16 @@ Button k1,k2,k3;
 
             }
         });
+
+        k1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(getApplicationContext(),Teacher_home.class);
+
+                startActivity(intent);
+
+            }
+        });
     }
 }

@@ -3,18 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/drawable/badge_background_white.xml" value="0.1" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/drawable/bd_label.xml" value="0.1005" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/drawable/ic_house.xml" value="0.1005" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/drawable/ic_person.xml" value="0.1005" />
+        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/drawable/ms__arrow.xml" value="0.1075" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/drawable/registerchooseicon.xml" value="0.1005" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_login.xml" value="0.16210739614994935" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_login_or_sign_up.xml" value="0.16210739614994935" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_register_choose.xml" value="0.16210739614994935" />
-        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_registeration.xml" value="0.18" />
+        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_registeration.xml" value="0.15" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_splash_screen.xml" value="0.16210739614994935" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_student_input.xml" value="0.17" />
         <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/activity_teacher_home.xml" value="0.16210739614994935" />
+        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/content_main.xml" value="0.16210739614994935" />
+        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/fragment_home.xml" value="0.16210739614994935" />
+        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/fragment_search.xml" value="0.11481481481481481" />
+        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/fragment_starred.xml" value="0.16210739614994935" />
+        <entry key="..\:/Users/crazy_psy__/AndroidStudioProjects/Fisat_pro/app/src/main/res/layout/ms__list_item.xml" value="0.16210739614994935" />
       </map>
     </option>
   </component>

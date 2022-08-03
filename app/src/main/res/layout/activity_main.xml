@@ -141,7 +141,9 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="20dp"
-                        android:src="@drawable/rectanglebox" />
+                        android:src="@drawable/rectanglebox"
+                        android:layout_marginRight="50dp"
+                        />
 
                 </LinearLayout>
             </HorizontalScrollView>
@@ -192,7 +194,9 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="20dp"
-                        android:src="@drawable/rectanglebox" />
+                        android:src="@drawable/rectanglebox"
+                        android:layout_marginRight="50dp"
+                        />
 
                 </LinearLayout>
             </HorizontalScrollView>
@@ -243,7 +247,9 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="20dp"
-                        android:src="@drawable/rectanglebox" />
+                        android:src="@drawable/rectanglebox"
+                        android:layout_marginRight="50dp"
+                        />
 
                 </LinearLayout>
             </HorizontalScrollView>

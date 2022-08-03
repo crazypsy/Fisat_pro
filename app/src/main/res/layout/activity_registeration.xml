@@ -53,7 +53,44 @@
                 android:paddingStart="15dp"
                 android:textColor="@color/black"
                 />
+            <RadioGroup
+                android:id="@+id/radioGrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="8dp"
 
+                android:outlineAmbientShadowColor="@color/white"
+                android:paddingRight="8dp"
+                >
+                <RadioButton
+                    android:id="@+id/radioM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="true"
+                    android:textColorHint="@color/white"
+                    android:paddingStart="20dp"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"
+                    android:text="Male"
+                    />
+                <RadioButton
+                    android:id="@+id/radioF"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:checked="false"
+                    android:paddingStart="20dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:text="Female"
+                    />
+            </RadioGroup>
 
             <EditText
                 android:id="@+id/editTextTextPersonAddress"
@@ -105,7 +142,12 @@
                 android:textColor="@color/black"
                 />
 
+            <include layout="@layout/content_main"
+                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_marginTop="30dp"
 
+                />
             <EditText
                 android:id="@+id/editTextTextPersonPassword"
                 android:layout_width="wrap_content"
@@ -146,10 +188,11 @@
                 android:textSize="18dp"
                 android:textColor="@color/white"
                 android:textAllCaps="false"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="100dp"
 
                 android:background="@drawable/signup"
                 />
         </LinearLayout>
     </ScrollView>
+
 </RelativeLayout>
