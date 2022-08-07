@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fragment_container"
+        android:background="@drawable/backwall"
         android:layout_above="@+id/bubbleNavigation"/>
 
     <com.example.fisat_pro.bubblenavigation.BubbleNavigationLinearView
@@ -16,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#ffffff"
+        android:background="@drawable/navbarback"
         android:elevation="8dp"
         android:orientation="horizontal"
         android:padding="12dp"
@@ -29,30 +30,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:bt_colorActive="@color/green_500"
+            app:bt_colorActive="@color/red_400"
             app:bt_colorInactive="#000000"
-            app:bt_icon="@drawable/ic_house"
-            app:bt_title="Home" />
+            app:bt_icon="@drawable/students"
+            app:bt_title="Student" />
 
         <com.example.fisat_pro.bubblenavigation.BubbleToggleView
             android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:bt_colorActive="@color/amber_700"
+            app:bt_colorActive="@color/red_400"
             app:bt_colorInactive="#000000"
-            app:bt_icon="@drawable/search"
-            app:bt_title="Search" />
+            app:bt_icon="@drawable/parameters"
+            app:bt_title="Data" />
 
         <com.example.fisat_pro.bubblenavigation.BubbleToggleView
             android:id="@+id/starred"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:bt_colorActive="@color/teal_200"
+            app:bt_colorActive="@color/red_400"
             app:bt_colorInactive="#000000"
-            app:bt_icon="@drawable/ic_lock"
-            app:bt_title="Starred" />
+            app:bt_icon="@drawable/comment"
+            app:bt_title="Status" />
 
 
 

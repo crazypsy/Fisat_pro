@@ -102,7 +102,7 @@ public class MaterialSpinner extends TextView {
         defaultPopupPaddingTop = defaultPopupPaddingBottom = resources.getDimensionPixelSize(R.dimen.ms__popup_padding_top);
 
         try {
-            backgroundColor = ta.getColor(R.styleable.MaterialSpinner_ms_background_color, Color.GRAY);
+            backgroundColor = ta.getColor(R.styleable.MaterialSpinner_ms_background_color, Color.WHITE);
             backgroundSelector = ta.getResourceId(R.styleable.MaterialSpinner_ms_background_selector, 0);
             textColor = ta.getColor(R.styleable.MaterialSpinner_ms_text_color, defaultColor);
             hintColor = ta.getColor(R.styleable.MaterialSpinner_ms_hint_color, defaultColor);
@@ -135,8 +135,9 @@ public class MaterialSpinner extends TextView {
         setGravity(Gravity.CENTER_VERTICAL | Gravity.START);
         setClickable(true);
         setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
+        //this is where changed bg of spinner
 
-        setBackgroundResource(R.drawable.ms__selector);
+        setBackgroundResource(R.drawable.input);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && rtl) {
             setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
             setTextDirection(View.TEXT_DIRECTION_RTL);
