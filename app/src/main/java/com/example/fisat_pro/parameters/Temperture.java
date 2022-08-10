@@ -24,7 +24,7 @@ public class Temperture extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temperture);
         k1 = findViewById(R.id.SubMit);
-        k1.setText("Submit");
+        k1.setText("Save");
         MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.State);
 
         spinner.setItems(ANDROID_VERSIONS);

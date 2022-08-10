@@ -153,11 +153,10 @@
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView2"
+                android:id="@+id/Declined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginBottom="180dp"
                 android:orientation="horizontal">
 
             </androidx.recyclerview.widget.RecyclerView>

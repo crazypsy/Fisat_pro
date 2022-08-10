@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     //vars
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
-
+    String choose;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +48,31 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), Teacher_home.class);
+                choose = "1";
+                Intent intent = new Intent(getApplicationContext(), AllParameterView.class);
+                intent.putExtra("Key", choose);
+                startActivity(intent);
 
+            }
+        });
+        k2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                choose = "2";
+                Intent intent = new Intent(getApplicationContext(), AllParameterView.class);
+                intent.putExtra("Key", choose);
+                startActivity(intent);
+
+            }
+        });
+        k3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                choose = "3";
+                Intent intent = new Intent(getApplicationContext(), AllParameterView.class);
+                intent.putExtra("Key", choose);
                 startActivity(intent);
 
             }
@@ -60,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     private void getImages() {
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
-        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
+        mImageUrls.add("https://i.imgur.com/ZcLLrkY.jpg");
         mNames.add("Aug 6");
 
         mImageUrls.add("https://i.redd.it/tpsnoz5bzo501.jpg");
@@ -110,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView1.setAdapter(adapter1);
 
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        RecyclerView recyclerView2 = findViewById(R.id.recyclerView2);
+        RecyclerView recyclerView2 = findViewById(R.id.Declined);
         recyclerView2.setLayoutManager(layoutManager2);
         RecyclerViewAdapter adapter2 = new RecyclerViewAdapter(this, mNames, mImageUrls);
         recyclerView1.setAdapter(adapter2);

@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
 
-                android:text="Measure by using the thermometer"
+                android:text="Measure by using the hygrometer"
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="italic" />

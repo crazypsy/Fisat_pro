@@ -16,6 +16,20 @@
         android:theme="@style/Theme.Fisat_pro"
         tools:targetApi="31">
         <activity
+            android:name=".ParameterView"
+            android:exported="false" />
+        <activity
+            android:name=".AllParameterView"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".parameters.RainFall"
+            android:exported="false" />
+        <activity
+            android:name=".PreviewData"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".parameters.FloodLevel"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />

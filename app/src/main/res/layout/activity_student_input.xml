@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/backwall"
     tools:context=".Student_Input">
 
@@ -46,31 +47,106 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="20dp">
 
-                <TextView
 
+                <androidx.cardview.widget.CardView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/rectanglebox"
-                    android:gravity="center"
-                    android:id="@+id/Temperture"
-                    android:text="Temerpure" />
+                    android:id="@+id/RainFall"
+                    android:layout_centerInParent="true"
 
-                <TextView
+                    app:cardBackgroundColor="@color/grey_500"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
 
+                    app:cardMaxElevation="2dp"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/RainFallimage_view"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/RainFallname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/RainFallimage_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+
+
+                            android:gravity="center"
+                            android:text="Rain"
+                            android:textColor="#000" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:id="@+id/Temperature"
+
+                    android:layout_centerInParent="true"
+                    app:cardBackgroundColor="@color/grey_500"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
                     android:layout_marginLeft="30dp"
-                    android:background="@drawable/rectanglebox"
-                    android:gravity="center"
-                    android:id="@+id/WaterLevel"
-                    android:text="Water Level" />
+                    app:cardMaxElevation="2dp"
+
+                    >
 
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/Temperatureimage_view"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/Temperaturename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/Temperatureimage_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+
+
+                            android:gravity="center"
+                            android:text="Temperature"
+                            android:textColor="#000" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
             <LinearLayout
@@ -81,55 +157,99 @@
                 android:orientation="horizontal"
                 android:padding="20dp">
 
-                <TextView
-
+                <androidx.cardview.widget.CardView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/rectanglebox"
-                    android:gravity="center"
+                    android:layout_centerInParent="true"
+
                     android:id="@+id/Humidity"
-                    android:text="Humdity" />
+                    app:cardBackgroundColor="@color/grey_500"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
 
-                <TextView
+                    app:cardMaxElevation="2dp"
 
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/Humidityimage_view"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/Humidityname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/Humidityimage_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+
+
+                            android:gravity="center"
+                            android:text="Humidity"
+                            android:textColor="#000" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@drawable/rectanglebox"
-                    android:gravity="center"
-                    android:id="@+id/Pressure"
-                    android:text="Pressure" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-                <TextView
-
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/rectanglebox"
-                    android:gravity="center"
                     android:id="@+id/GroundWater"
-                    android:text="Flood Level" />
 
-                <TextView
-
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    app:cardBackgroundColor="@color/grey_500"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
                     android:layout_marginLeft="30dp"
-                    android:background="@drawable/rectanglebox"
-                    android:gravity="center"
-                    android:id="@+id/Wind"
-                    android:text="Wind" />
+                    app:cardMaxElevation="2dp"
 
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/GroundWaterimage_view"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/GroundWatername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/GroundWaterimage_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+
+
+                            android:gravity="center"
+                            android:text="Ground Water "
+                            android:textColor="#000" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -141,18 +261,219 @@
                 android:orientation="horizontal"
                 android:padding="20dp">
 
-                <TextView
-
+                <androidx.cardview.widget.CardView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/rectanglebox"
-                    android:gravity="center"
+                    android:id="@+id/FloodLevel"
+
+                    android:layout_centerInParent="true"
+                    app:cardBackgroundColor="@color/grey_500"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+
+                    app:cardMaxElevation="2dp"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/FloodLevelimage_view"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/FloodLevelname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/FloodLevelimage_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+
+
+                            android:gravity="center"
+                            android:text="Flood Level"
+                            android:textColor="#000" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/Wind"
+
+                    android:layout_centerInParent="true"
+                    app:cardBackgroundColor="@color/grey_500"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    android:layout_marginLeft="30dp"
+                    app:cardMaxElevation="2dp"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/Windimage_view"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/Windname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/Windimage_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+
+
+                            android:gravity="center"
+                            android:text="Wind "
+                            android:textColor="#000" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RiverWidth"
-                    android:text="River length" />
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+
+                    app:cardBackgroundColor="@color/grey_500"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+
+                    app:cardMaxElevation="2dp"
+
+                    >
 
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/RiverWidthimage_view"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/RiverWidthname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/RiverWidthimage_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+
+
+                            android:gravity="center"
+                            android:text="River Stream"
+                            android:textColor="#000" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/Pressure"
+
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30dp"
+                    app:cardBackgroundColor="@color/grey_500"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:cardMaxElevation="2dp"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/Pressureimage_view"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/Pressurename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/Pressureimage_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+
+
+                            android:text="Pressure"
+                            android:textColor="#000"
+                            android:textSize="13dp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/SubMit"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
+
+        android:background="@drawable/submit"
+        android:src="@drawable/ic_notification" />
 </RelativeLayout>

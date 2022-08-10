@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backwall"
-    tools:context=".parameters.Wind"
+    tools:context=".parameters.RainFall"
 
     >
 
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:gravity="center"
-                android:text="Wind speed"
+                android:text="Rain fall"
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
 
-                    android:text="Normal speed"
+                    android:text="Normal Rain"
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
 
-                    android:text=": 24 m"
+                    android:text=": 24 mm"
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
 
-                android:text="Measure by using the anemometer"
+                android:text="Measure by using the rain gauge"
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="italic" />
@@ -82,7 +82,7 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/input"
                     android:ems="10"
-                    android:hint="speed "
+                    android:hint="Rain "
                     android:inputType="numberDecimal"
                     android:paddingStart="15dp"
                     android:textColor="@color/black"
@@ -101,30 +101,6 @@
                     app:ms_dropdown_height="wrap_content"
                     app:ms_dropdown_max_height="300dp" />
             </TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-
-                android:text="Direction"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-
-                android:textStyle="bold" />
-
-            <com.example.fisat_pro.customspinner.MaterialSpinner
-
-                android:id="@+id/WindDirection"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-
-                android:accessibilityPaneTitle="Country"
-                android:textColor="@color/black"
-                app:ms_dropdown_height="wrap_content"
-                app:ms_dropdown_max_height="300dp" />
         </LinearLayout>
     </ScrollView>
 
