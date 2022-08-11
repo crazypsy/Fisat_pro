@@ -14,7 +14,7 @@ public class Splash_screen extends AppCompatActivity {
     Animation topAnim, bottomAnim;
     ImageView image;
     TextView text1, text2;
-    private static int SPLASH_SCREEN = 3000;
+    private static int SPLASH_SCREEN = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

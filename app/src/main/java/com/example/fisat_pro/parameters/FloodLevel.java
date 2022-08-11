@@ -33,12 +33,14 @@ public class FloodLevel extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flood_level);
+
+        sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         floolevelength = findViewById(R.id.editTextFloodLevel);
         k1 = findViewById(R.id.SubMit);
         k1.setText("Save");
         sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         //  logid = sh.getString("logid", "");
-        spinner = (MaterialSpinner) findViewById(R.id.State);
+        spinner = (MaterialSpinner) findViewById(R.id.FloodLevelUnit);
 
         spinner.setItems(ANDROID_VERSIONS);
         spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
@@ -71,11 +73,20 @@ public class FloodLevel extends AppCompatActivity {
                 } else {
 
                     set = "1";
+                    SharedPreferences.Editor ed = sh.edit();
+                    ed.putString("flood", set);
+                    ed.commit();
                     Intent intent = new Intent(getApplicationContext(), Student_Input.class);
-                    intent.putExtra("fill", set);
+                    // intent.putExtra("flood", set);
                     startActivity(intent);
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), Student_Input.class));
     }
 }

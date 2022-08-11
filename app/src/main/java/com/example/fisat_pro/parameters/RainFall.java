@@ -1,11 +1,17 @@
 package com.example.fisat_pro.parameters;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fisat_pro.R;
+import com.example.fisat_pro.Student_Input;
 import com.example.fisat_pro.customspinner.MaterialSpinner;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -16,14 +22,21 @@ public class RainFall extends AppCompatActivity {
 
     };
     Button k1;
+    MaterialSpinner spinner;
+    EditText rainfall;
+    String rainfallNumber, rainfallunit, set;
+    SharedPreferences sh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rain_fall);
+        sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        rainfall = findViewById(R.id.editTextTextRainfalle);
+
         k1 = findViewById(R.id.SubMit);
         k1.setText("Save");
-        MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.State);
+        spinner = (MaterialSpinner) findViewById(R.id.RainFallUnits);
 
         spinner.setItems(ANDROID_VERSIONS);
         spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
@@ -33,12 +46,41 @@ public class RainFall extends AppCompatActivity {
                 Snackbar.make(view, "Clicked " + item, Snackbar.LENGTH_LONG).show();
             }
         });
-        spinner.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
+//        spinner.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
+//
+//            @Override
+//            public void onNothingSelected(MaterialSpinner spinner) {
+//                Snackbar.make(spinner, "Nothing selected", Snackbar.LENGTH_LONG).show();
+//            }
+//        });
 
+        k1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onNothingSelected(MaterialSpinner spinner) {
-                Snackbar.make(spinner, "Nothing selected", Snackbar.LENGTH_LONG).show();
+            public void onClick(View v) {
+                rainfallNumber = rainfall.getText().toString();
+                rainfallunit = spinner.getText().toString();
+
+
+                if (rainfallNumber.equals("")) {
+                    rainfall.setError("Measure please");
+
+                } else {
+
+                    set = "1";
+                    SharedPreferences.Editor ed = sh.edit();
+                    ed.putString("rainfall", set);
+                    ed.commit();
+                    Intent intent = new Intent(getApplicationContext(), Student_Input.class);
+                    //  intent.putExtra("rainfall", set);
+                    startActivity(intent);
+                }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), Student_Input.class));
     }
 }

@@ -1,12 +1,12 @@
 package com.example.fisat_pro;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fisat_pro.customspinner.MaterialSpinner;
 import com.google.android.material.snackbar.Snackbar;
@@ -147,13 +147,14 @@ TextView t1;
         });
 
 
-
-
     }
 
 
-
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), RegisterChoose.class));
+    }
 
 
 }

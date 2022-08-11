@@ -75,7 +75,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/editTextTextTemperture"
                     android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
@@ -90,7 +90,7 @@
 
                 <com.example.fisat_pro.customspinner.MaterialSpinner
 
-                    android:id="@+id/State"
+                    android:id="@+id/TemperatureUnit"
                     android:layout_width="130dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="30dp"
@@ -108,10 +108,11 @@
         android:id="@+id/SubMit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="70dp"
+        android:textAllCaps="false"
 
         android:background="@drawable/submit"
         android:src="@drawable/ic_notification" />

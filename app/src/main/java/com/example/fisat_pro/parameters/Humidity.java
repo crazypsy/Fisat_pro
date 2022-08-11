@@ -1,7 +1,9 @@
 package com.example.fisat_pro.parameters;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,15 +27,18 @@ public class Humidity extends AppCompatActivity {
     MaterialSpinner spinner;
     EditText humidty;
     String HumidityNumber, humidityunit, set;
+    SharedPreferences sh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_humidity);
+        sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
         humidty = findViewById(R.id.editTextTextPersonName);
         k1 = findViewById(R.id.SubMit);
         k1.setText("Save");
-        spinner = (MaterialSpinner) findViewById(R.id.State);
+        spinner = (MaterialSpinner) findViewById(R.id.HumidityUnit);
 
         spinner.setItems(ANDROID_VERSIONS);
         spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
@@ -63,12 +68,21 @@ public class Humidity extends AppCompatActivity {
 
                 } else {
 
-                    set = "2";
+                    set = "1";
+                    SharedPreferences.Editor ed = sh.edit();
+                    ed.putString("humidity", set);
+                    ed.commit();
                     Intent intent = new Intent(getApplicationContext(), Student_Input.class);
-                    intent.putExtra("fill", set);
+                    //  intent.putExtra("humidity", set);
                     startActivity(intent);
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), Student_Input.class));
     }
 }

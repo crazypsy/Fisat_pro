@@ -136,6 +136,14 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView2 = findViewById(R.id.Declined);
         recyclerView2.setLayoutManager(layoutManager2);
         RecyclerViewAdapter adapter2 = new RecyclerViewAdapter(this, mNames, mImageUrls);
-        recyclerView1.setAdapter(adapter2);
+        recyclerView2.setAdapter(adapter2);
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), LoginOrSignUp.class));
     }
 }

@@ -1,10 +1,13 @@
 package com.example.fisat_pro;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -24,13 +27,18 @@ public class Student_Input extends AppCompatActivity {
     //    TextView temp, hum, wat, river, wind, pressure, FloodLevel;
     CardView temp, hum, wat, river, wind, pressure, FloodLevel, Rain;
     Layout layout;
-    int keyy = 0;
-    String blah;
+    int keyy = 0, flood = 0, humidity = 0, press = 0, rain = 0, riverlength = 0, temper = 0, ground = 0, windd = 0, sum = 0;
+    String blah = "0", flood_f, humidity_f, pressure_f, rainfall_f, river_f, temp_f, ground_f, wind_f;
+
+    SharedPreferences sh;
+
+    TextView comment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_input);
+        comment = findViewById(R.id.demooops);
         k1 = findViewById(R.id.SubMit);
         k1.setText("Preview");
 
@@ -149,31 +157,128 @@ public class Student_Input extends AppCompatActivity {
 
             }
         });
-        Intent callerIntent1 = getIntent();
-        blah = callerIntent1.getStringExtra("fill");
-        if (blah != null) {
-            keyy = Integer.parseInt(blah);
+
+        sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        flood_f = sh.getString("flood", "0");
+
+        temp_f = sh.getString("temerap", "0");
+        rainfall_f = sh.getString("rainfall", "0");
+        river_f = sh.getString("riverlength", "0");
+        humidity_f = sh.getString("humidity", "0");
+        pressure_f = sh.getString("pressure", "0");
+        ground_f = sh.getString("groundwaterl", "0");
+        wind_f = sh.getString("windfull", "0");
+
+
+        if (flood_f != blah) {
+            flood = Integer.parseInt(flood_f);
+        }
+
+        if (temp_f != blah) {
+            temper = Integer.parseInt(temp_f);
+        }
+
+        if (rainfall_f != blah) {
+            rain = Integer.parseInt(rainfall_f);
+        }
+
+        if (river_f != blah) {
+            riverlength = Integer.parseInt(river_f);
+        }
+
+        if (humidity_f != blah) {
+            humidity = Integer.parseInt(humidity_f);
+        }
+
+
+        if (pressure_f != blah) {
+            press = Integer.parseInt(pressure_f);
+        }
+
+        if (ground_f != blah) {
+            ground = Integer.parseInt(ground_f);
+        }
+
+        if (wind_f != blah) {
+            windd = Integer.parseInt(wind_f);
+        }
+
+
+        //in integer
+
+        if (flood == 1) {
+            FloodLevel.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_A400));
         } else {
             FloodLevel.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
-            pressure.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
-            wind.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
-            river.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
-            wat.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
-            hum.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
-            temp.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
-            Rain.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
+
         }
-        if (keyy == 1) {
-            FloodLevel.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_400));
-        } else if (keyy == 2) {
-            hum.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_400));
+
+
+        if (press == 1) {
+            pressure.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_A400));
+        } else {
+            pressure.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
+        }
+
+
+        if (windd == 1) {
+            wind.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_A400));
+        } else {
+            wind.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
+        }
+
+
+        if (riverlength == 1) {
+            river.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_A400));
+        } else {
+            river.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
+        }
+
+
+        if (ground == 1) {
+            wat.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_A400));
+        } else {
+            wat.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
+        }
+
+
+        if (humidity == 1) {
+            hum.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_A400));
+        } else {
+            hum.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
+        }
+
+
+        if (temper == 1) {
+            temp.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_A400));
+        } else {
+            temp.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
+        }
+
+
+        if (rain == 1) {
+            Rain.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_A400));
         } else {
 
-            hum.setCardBackgroundColor(ContextCompat.getColor(this, R.color.red_700));
+            Rain.setCardBackgroundColor(ContextCompat.getColor(this, R.color.grey_500));
+        }
+        sum = flood + humidity + press + rain + riverlength + temper + ground + windd;
+        if (sum == 8) {
+            k1.setVisibility(Button.VISIBLE);
+            comment.setVisibility(TextView.GONE);
+        } else {
+            k1.setVisibility(Button.GONE);
+            comment.setVisibility(TextView.VISIBLE);
         }
 
 
         //  Rain.setCardBackgroundColor(ContextCompat.getColor(this,R.color.green_400));
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 }
